@@ -6,10 +6,9 @@ import json
 
 app = FastAPI()
 
-# CORS Middleware for handling cross-origin requests
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3001"],  # Allow frontend domain
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
     allow_headers=["*"],  # Allow all headers
